@@ -36,9 +36,15 @@ def register():
     kc = wm.keyconfigs.addon
     if kc:
         km = wm.keyconfigs.addon.keymaps.new(name='3D View', space_type='VIEW_3D')
+
         kmi = km.keymap_items.new('wm.call_menu', 'SPACE', 'PRESS', ctrl=False, shift=False, alt=False)
         kmi.properties.name =  ui.main_menu.MYBLENDRC_MT_MAIN_MENU.bl_idname
         addon_keymaps.append((km, kmi))
+        
+        kmi = km.keymap_items.new('wm.call_menu', 'Q', 'PRESS', ctrl=False, shift=False, alt=False)
+        kmi.properties.name = ui.q_menu.MYBLENDRC_MT_Q_MENU.bl_idname
+        addon_keymaps.append((km, kmi))
+
 
 def unregister():
     for cls in setup_tools.register.__bl_classes:
