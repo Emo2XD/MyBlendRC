@@ -31,7 +31,7 @@ class MYBLENDRC_OT_GPencilToggleBrush_1(bpy.types.Operator):
     """change to Blue draft brush"""
     bl_idname = "myblendrc.gpen_to_slot1"
     bl_label = "1"
-    bl_description = "1 GPBrush Blue draft"
+    bl_description = "1 change grease pencil brush and layer to Blue draft"
     
     def execute(self, context):        
         _ToggleBrushLayer(context, 
@@ -47,7 +47,7 @@ class MYBLENDRC_OT_GPencilToggleBrush_2(bpy.types.Operator):
     """change to Green draft brush"""
     bl_idname = "myblendrc.gpen_to_slot2"
     bl_label = "2"
-    bl_description = "2 GPBrush Green draft"
+    bl_description = "2 change grease pencil brush and layer to Green draft"
     
     def execute(self, context):
         _ToggleBrushLayer(context, 
@@ -63,7 +63,7 @@ class MYBLENDRC_OT_GPencilToggleBrush_3(bpy.types.Operator):
     """change to Red draft brush"""
     bl_idname = "myblendrc.gpen_to_slot3"
     bl_label = "3"
-    bl_description = "3 GPBrush Red draft"
+    bl_description = "3 change grease pencil brush and layer to Red draft"
     
     def execute(self, context):
         _ToggleBrushLayer(context, 
@@ -80,7 +80,7 @@ class MYBLENDRC_OT_GPencilToggleBrush_4(bpy.types.Operator):
     """change to tight line brush"""
     bl_idname = "myblendrc.gpen_to_slot4"
     bl_label = "4"
-    bl_description = "4 GPBrush Tight line"
+    bl_description = "4 change grease pencil brush and layer to Tight line"
     
     def execute(self, context):
         _ToggleBrushLayer(context, 
@@ -97,7 +97,7 @@ class MYBLENDRC_OT_GPencilToggleBrush_5(bpy.types.Operator):
     """change to shade fill brush"""
     bl_idname = "myblendrc.gpen_to_slot5"
     bl_label = "5"
-    bl_description = "5 GPBrush Shade Fill"
+    bl_description = "5 change grease pencil brush and layer to Shade Fill"
     
     def execute(self, context):
         _ToggleBrushLayer(context, 
