@@ -4,9 +4,11 @@ if "bpy" not in locals():
     from . import setup_gpencil
     from . import toggle_brush_layer
     from . import visibility
+    from . import custom_operators
 else:
     import importlib
     importlib.reload(gpencil_layer_tool)
     importlib.reload(setup_gpencil)
     importlib.reload(toggle_brush_layer)
     importlib.reload(visibility)
+    importlib.reload(custom_operators)

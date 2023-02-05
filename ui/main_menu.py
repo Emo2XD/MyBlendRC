@@ -22,6 +22,13 @@ class MYBLENDRC_MT_MAIN_MENU(bpy.types.Menu):
             layout.operator("myblendrc.gpencil_force_frame_add_all")
             layout.operator("gpencil.lock_all", text="L lock all layers")
             layout.operator("gpencil.unlock_all", text="U unlock all layers")
+
+        # elif context.object.type == 'MESH':
+        #     if context.active_object.mode=='TEXTURE_PAINT':
+        #         layout.operator("myblendrc.toggle_paint_through")
+        #         layout.operator("myblendrc.toggle_stroke_method")
+
          
         layout.separator()
         layout.operator("myblendrc.toggle_mesh_visibility")
+
