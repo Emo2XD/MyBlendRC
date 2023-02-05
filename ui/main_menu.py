@@ -19,9 +19,9 @@ class MYBLENDRC_MT_MAIN_MENU(bpy.types.Menu):
 
             layout.separator()
 
+            layout.operator("myblendrc.gpencil_force_frame_add_all")
             layout.operator("gpencil.lock_all", text="L lock all layers")
             layout.operator("gpencil.unlock_all", text="U unlock all layers")
          
         layout.separator()
         layout.operator("myblendrc.toggle_mesh_visibility")
-        layout.menu("SCREEN_MT_user_menu")
