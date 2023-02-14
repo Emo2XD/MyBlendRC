@@ -30,5 +30,6 @@ class MYBLENDRC_MT_MAIN_MENU(bpy.types.Menu):
 
          
         layout.separator()
+        layout.operator("myblendrc.camera_flip")
         layout.operator("myblendrc.toggle_mesh_visibility")
 

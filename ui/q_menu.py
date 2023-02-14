@@ -32,3 +32,12 @@ class MYBLENDRC_MT_Q_MENU(bpy.types.Menu):
             elif context.active_object.mode=='TEXTURE_PAINT':
                 layout.operator("myblendrc.toggle_paint_through")
                 layout.operator("myblendrc.toggle_stroke_method")
+        
+
+        # elif context.object.type == 'GPENCIL':
+        #     layout.operator("gpencil.hide", text="H Hide Other Layers").unselected = True
+
+        #     layout.operator("gpencil.reveal", text="Z Reveal All Layers")
+
+
+
