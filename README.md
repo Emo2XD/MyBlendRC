@@ -1,4 +1,4 @@
 # MyBlendRC: Menu Based Keybinding System
-- Press spacebar and a menu will popup.
-- Press Q and extended quick access menu will popup.
-- Or, you can use search to access operators.
+- Press <kbd>Space</kbd> and a menu will popup.
+- Press <kbd>Q</kbd> and extended quick access menu will popup.
+- Or, you can use search tools in Blender to access these operators.
