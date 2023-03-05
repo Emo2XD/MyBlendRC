@@ -18,7 +18,9 @@ class MYBLENDRC_MT_MAIN_MENU(bpy.types.Menu):
             layout.operator("myblendrc.gpen_to_slot5")
 
             layout.separator()
+            layout.operator("myblendrc.gpen_eraser_to_slot3", text="E change brush to \'3gpe\'")
 
+            layout.separator()
             layout.operator("myblendrc.gpencil_force_frame_add_all")
             layout.operator("gpencil.lock_all", text="L lock all layers")
             layout.operator("gpencil.unlock_all", text="U unlock all layers")

@@ -5,15 +5,25 @@ from ..setup_tools.register import register_wrap
 
 def _ToggleBrushLayer(context, name_pen='', name_layer='', 
                         gpencil_color_mode='MATERIAL'):
-    """ Arguments
+    """ 
+    Toggles brush and layers at once, while Locking the other layers.
+    Also change default eraser to Stroke type.
+    Arguments
         name_pen: str, name of the brush you wanna use.
         name_layer: str, name of the layer you wanna draw on
         gpencil_color_mode: str, 'MATERIAL' or 'VERTEXCOLOR'
     """                            
+    # if current brush is eraser, then make the default eraser to '4gpe'.
+    # This script in if statement is to treat Blender's bug for default eraser
+    if (context.tool_settings.gpencil_paint.brush.gpencil_tool == 'ERASE') and \
+            (context.tool_settings.gpencil_paint.brush.name_full != '4gpe'):
+        context.tool_settings.gpencil_paint.brush = bpy.data.brushes['4gpe']
+        bpy.data.brushes['4gpe'].gpencil_settings.use_default_eraser = True
+
     # context.active_object.data.layers.active.lock=True
     bpy.ops.gpencil.lock_all()
 
-    
+    # This is the Grease pencil object data, not pen brush
     current_GPen = context.active_object.data
     
     
@@ -110,3 +120,13 @@ class MYBLENDRC_OT_GPencilToggleBrush_5(bpy.types.Operator):
     
     
 
+@register_wrap
+class MYBLENDRC_OT_GPencilToggleBrush_E3(bpy.types.Operator):
+    """change to eraser 1 """
+    bl_idname = "myblendrc.gpen_eraser_to_slot3"
+    bl_label = "E 3"
+    bl_description = "3 change grease pencil brush to eraser"
+    
+    def execute(self, context):
+        context.tool_settings.gpencil_paint.brush = bpy.data.brushes['3gpe']                       
+        return {'FINISHED'}
