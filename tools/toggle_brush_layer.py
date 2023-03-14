@@ -15,10 +15,12 @@ def _ToggleBrushLayer(context, name_pen='', name_layer='',
     """                            
     # if current brush is eraser, then make the default eraser to '4gpe'.
     # This script in if statement is to treat Blender's bug for default eraser
-    if (context.tool_settings.gpencil_paint.brush.gpencil_tool == 'ERASE') and \
-            (context.tool_settings.gpencil_paint.brush.name_full != '4gpe'):
-        context.tool_settings.gpencil_paint.brush = bpy.data.brushes['4gpe']
-        bpy.data.brushes['4gpe'].gpencil_settings.use_default_eraser = True
+    # if (context.tool_settings.gpencil_paint.brush.gpencil_tool == 'ERASE') and \
+    #         (context.tool_settings.gpencil_paint.brush.name_full != '4gpe'):
+    #     context.tool_settings.gpencil_paint.brush = bpy.data.brushes['4gpe']
+    #     bpy.data.brushes['4gpe'].gpencil_settings.use_default_eraser = True
+    context.tool_settings.gpencil_paint.brush = bpy.data.brushes['4gpe']
+    bpy.data.brushes['4gpe'].gpencil_settings.use_default_eraser = True
 
     # context.active_object.data.layers.active.lock=True
     bpy.ops.gpencil.lock_all()
